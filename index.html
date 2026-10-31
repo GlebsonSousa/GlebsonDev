@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Glebson Sousa — Desenvolvedor back-end</title>
+  <meta name="description" content="Desenvolvedor back-end. APIs, integrações e automações com Node.js, Python e bancos de dados.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="js/tema.js"></script>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/secoes.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+
+  <div class="alvo" id="alvo"></div>
+
+  <nav class="menu" id="menu" aria-label="Seções">
+    <a href="#inicio" class="so-desktop">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#trajetoria">Trajetória</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <header class="hero" id="inicio">
+    <div class="hero-topo">
+      <span class="mono">Node.js · Python · SQL</span>
+      <button class="tema-botao" id="tema-botao" type="button"><i></i><span>Escuro</span></button>
+    </div>
+
+    <div class="hero-foto">
+      <img src="img/glebson.webp" alt="Glebson Sousa de perfil" fetchpriority="high">
+    </div>
+
+    <div class="container">
+      <div class="hero-conteudo">
+        <h1>
+          <span class="hero-nome titulo-display">Glebson<br>Sousa</span>
+          <span class="hero-titulo">Construo APIs e automações que colocam processos para rodar sozinhos.</span>
+        </h1>
+        <p class="hero-frase">Desenvolvedor back-end com Node.js, Python e bancos de dados. Comecei automatizando rotinas na CVC Corp — hoje construo sistemas do banco de dados à API.</p>
+        <div class="hero-acoes">
+          <a class="botao botao-cheio" href="#projetos">Ver projetos ↗</a>
+          <a class="botao botao-vazado" href="#contato">Dizer olá</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="secao" id="sobre">
+      <div class="secao-cabecalho">
+        <h2 class="secao-nome titulo-display">Sobre</h2>
+        <span class="secao-info mono">Back-end · Fatec Mauá</span>
+      </div>
+
+      <div class="sobre">
+        <div class="lugar-cracha"><div class="cordao"></div></div>
+
+        <div class="sobre-texto revelar">
+          <h3 class="frase-secao titulo-display">Código que resolve <span class="destaque">problema de negócio.</span></h3>
+          <p>Sou <strong>desenvolvedor back-end</strong> e curso <strong>Desenvolvimento de Software Multiplataforma na Fatec Mauá</strong>. No dia a dia trabalho com Node.js, Express, Python e bancos de dados, construindo APIs, integrações e automações.</p>
+          <p>Comecei a programar resolvendo problemas reais: na área financeira da <strong>CVC Corp</strong>, automatizei com Python e Power Automate rotinas que eram feitas à mão. Dessa fase ficou um hábito — entender o processo antes de escrever o código.</p>
+          <div class="habilidades" id="habilidades"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" id="trajetoria">
+      <div class="secao-cabecalho">
+        <h2 class="secao-nome titulo-display">Trajetória</h2>
+        <span class="secao-info mono">Formação e experiência</span>
+      </div>
+      <div id="trajetoria-lista"></div>
+    </section>
+
+    <section class="secao" id="projetos">
+      <div class="secao-cabecalho">
+        <h2 class="secao-nome titulo-display">Projetos</h2>
+        <span class="secao-info mono">3 projetos · código no GitHub</span>
+      </div>
+      <div id="projetos-lista"></div>
+    </section>
+
+    <section class="secao" id="contato">
+      <div class="secao-cabecalho">
+        <h2 class="secao-nome titulo-display">Contato</h2>
+        <span class="secao-info mono">Respondo em até 1 dia útil</span>
+      </div>
+
+      <div class="contato">
+        <div class="contato-texto revelar">
+          <h3 class="frase-secao titulo-display">Tem uma vaga <span class="destaque">ou um projeto?</span></h3>
+          <p>Me manda uma mensagem por aqui que ela chega direto no meu e-mail.</p>
+          <div class="contato-links" id="contato-links"></div>
+        </div>
+
+        <form class="formulario revelar" id="formulario" novalidate>
+          <label>Nome
+            <input name="nome" required autocomplete="name" placeholder="Como posso te chamar?">
+          </label>
+          <label>E-mail
+            <input name="email" type="email" required autocomplete="email" placeholder="seu@email.com">
+          </label>
+          <label>Mensagem
+            <textarea name="mensagem" rows="5" required placeholder="Conta um pouco sobre a vaga ou o projeto"></textarea>
+          </label>
+          <input class="formulario-armadilha" name="_honey" tabindex="-1" autocomplete="off">
+          <button class="botao botao-cheio" type="submit">Enviar mensagem</button>
+          <p class="formulario-aviso" id="formulario-aviso" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="rodape">
+      <span>© 2026 Glebson Sousa</span>
+      <span>Feito à mão com HTML, CSS e JavaScript</span>
+    </footer>
+  </main>
+
+  <script src="js/dados.js"></script>
+  <script src="js/cracha.js"></script>
+  <script src="js/alvo.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/revelar.js"></script>
+  <script src="js/secao-sobre.js"></script>
+  <script src="js/secao-trajetoria.js"></script>
+  <script src="js/secao-projetos.js"></script>
+  <script src="js/secao-contato.js"></script>
+  <script src="js/aplicacao.js"></script>
+</body>
+</html>
