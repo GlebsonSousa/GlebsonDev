@@ -1,0 +1,208 @@
+@media (min-width: 600px) {
+  :root {
+    --margem: 28px;
+  }
+
+  .menu {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .menu a {
+    flex: none;
+    padding: 9px 16px;
+    font-size: 14px;
+  }
+
+  .hero-nome {
+    font-size: 19vw;
+  }
+
+  .habilidades {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .habilidades > div {
+    flex: 1;
+  }
+
+  .formulario .botao {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --margem: 32px;
+  }
+
+  .so-desktop {
+    display: inline-block;
+  }
+
+  .menu {
+    bottom: calc(20px + env(safe-area-inset-bottom));
+  }
+
+  .hero-topo {
+    left: max(var(--margem), calc((100% - var(--largura-maxima)) / 2 + var(--margem)));
+    right: max(var(--margem), calc((100% - var(--largura-maxima)) / 2 + var(--margem)));
+  }
+
+  .hero {
+    display: flex;
+    min-height: 100svh;
+  }
+
+  .hero-foto {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    height: 92svh;
+    max-height: 940px;
+    -webkit-mask-image: linear-gradient(#000 82%, transparent);
+    mask-image: linear-gradient(#000 82%, transparent);
+  }
+
+  .hero-conteudo {
+    justify-content: center;
+    max-width: 720px;
+    min-height: 100svh;
+    padding: 96px 0 112px;
+  }
+
+  .hero-nome {
+    font-size: clamp(96px, 10.5vw, 164px);
+  }
+
+  .hero-titulo {
+    max-width: 26ch;
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .hero-frase {
+    font-size: 17px;
+  }
+
+  .cordao {
+    width: 300px;
+  }
+
+  .cracha {
+    padding: 16px;
+  }
+
+  .cracha-foto {
+    height: 260px;
+  }
+
+  .cracha-nome {
+    font-size: 30px;
+  }
+
+  .secao {
+    padding-top: 160px;
+  }
+
+  .secao-cabecalho {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 64px;
+  }
+
+  .secao-info {
+    padding-bottom: 14px;
+    text-align: right;
+  }
+
+  .sobre {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 72px;
+  }
+
+  .sobre .lugar-cracha {
+    position: sticky;
+    top: 0;
+    order: 2;
+    flex: 0 0 300px;
+    margin-top: -64px;
+  }
+
+  .sobre .cordao-fita {
+    height: 200px;
+  }
+
+  .sobre-texto {
+    flex: 1;
+  }
+
+  .habilidades li {
+    padding: 9px 0;
+    border: 0;
+    border-bottom: 1px solid var(--linha);
+    border-radius: 0;
+    font-size: 15px;
+  }
+
+  .habilidades ul {
+    display: block;
+  }
+
+  .trajetoria-item {
+    flex-direction: row;
+    gap: 40px;
+    padding: 36px 0;
+  }
+
+  .trajetoria-periodo {
+    flex: 0 0 220px;
+    padding-top: 8px;
+  }
+
+  .trajetoria-item h3 {
+    font-size: 32px;
+  }
+
+  .projeto {
+    flex-direction: row;
+    align-items: center;
+    gap: 56px;
+    padding: 56px 0;
+  }
+
+  .projeto:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .projeto-imagem {
+    flex: 0 0 56%;
+  }
+
+  .projeto-texto {
+    flex: 1;
+  }
+
+  .projeto-texto h3 {
+    font-size: 64px;
+  }
+
+  .contato {
+    flex-direction: row;
+    gap: 56px;
+  }
+
+  .contato-texto,
+  .formulario {
+    flex: 1;
+  }
+
+  .rodape {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
